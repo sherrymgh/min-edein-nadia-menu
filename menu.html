@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>من إيدين نادية | المنيو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{
+    --ink:#243026;         /* deep pine text */
+    --olive:#3F4A3D;       /* deep olive green (card bg) */
+    --olive-dk:#2E362D;    /* darker olive for depth */
+    --cream:#F3ECD9;       /* warm cream page bg */
+    --cream-lt:#FAF6EA;
+    --gold:#B9A369;        /* muted gold accent */
+    --gold-lt:#D8C68F;
+    --clay:#A9542F;        /* muted clay/terracotta for a rare warm hit */
+  }
+  html{scroll-behavior:smooth;}
+  body{
+    background-color:var(--cream);
+    font-family:'Tajawal',sans-serif;
+    color:var(--ink);
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(185,163,105,0.10), transparent 40%),
+      radial-gradient(circle at 100% 15%, rgba(63,74,61,0.06), transparent 35%);
+  }
+  .font-display{font-family:'Aref Ruqaa', serif;}
+  .tatreez-border{
+    position:relative;
+    border:1px solid var(--gold);
+  }
+  .tatreez-border::before{
+    content:"";
+    position:absolute; inset:6px;
+    border:1px solid rgba(185,163,105,0.55);
+    pointer-events:none;
+  }
+  .corner{position:absolute; width:22px; height:22px; border-color:var(--gold);}
+  .corner-tl{top:-1px; right:-1px; border-top:2px solid; border-right:2px solid;}
+  .corner-tr{top:-1px; left:-1px; border-top:2px solid; border-left:2px solid;}
+  .corner-bl{bottom:-1px; right:-1px; border-bottom:2px solid; border-right:2px solid;}
+  .corner-br{bottom:-1px; left:-1px; border-bottom:2px solid; border-left:2px solid;}
+
+  .leaf-divider{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+  }
+  .leaf-divider .line{height:1px; width:100%; background:linear-gradient(90deg, transparent, var(--gold), transparent);}
+
+  .nav-pill{
+    white-space:nowrap;
+    transition:all .25s ease;
+  }
+  .nav-pill.active{
+    background:var(--olive);
+    color:var(--gold-lt);
+  }
+
+  .price-dots{
+    flex:1; border-bottom:1.5px dotted rgba(63,74,61,0.35);
+    margin:0 10px; transform:translateY(-4px);
+  }
+
+  .pkg-card{
+    background:linear-gradient(160deg, var(--olive) 0%, var(--olive-dk) 100%);
+  }
+  .pkg-card .pkg-badge{
+    background:var(--gold);
+    color:var(--olive-dk);
+  }
+
+  @keyframes floatSlow{
+    0%,100%{transform:translateY(0) rotate(0deg);}
+    50%{transform:translateY(-10px) rotate(2deg);}
+  }
+  .float-slow{animation:floatSlow 7s ease-in-out infinite;}
+
+  ::selection{background:var(--gold); color:var(--olive-dk);}
+
+  @media (prefers-reduced-motion: reduce){
+    .float-slow{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ===================== HERO ===================== -->
+<header class="relative overflow-hidden" style="background: radial-gradient(120% 100% at 50% 0%, #4a5748 0%, #384333 55%, #2c352a 100%);">
+  <!-- decorative olive branch line-art, faint -->
+  <svg class="absolute -top-6 -right-10 w-56 h-56 opacity-20 float-slow" viewBox="0 0 200 200" fill="none" stroke="#D8C68F" stroke-width="1.4">
+    <path d="M20 180 C 60 120, 80 90, 150 20"/>
+    <ellipse cx="70" cy="130" rx="14" ry="9" transform="rotate(-35 70 130)"/>
+    <ellipse cx="95" cy="100" rx="14" ry="9" transform="rotate(-35 95 100)"/>
+    <ellipse cx="120" cy="70" rx="14" ry="9" transform="rotate(-35 120 70)"/>
+    <circle cx="60" cy="145" r="4"/>
+    <circle cx="85" cy="115" r="4"/>
+  </svg>
+  <svg class="absolute -bottom-10 -left-10 w-64 h-64 opacity-15" viewBox="0 0 200 200" fill="none" stroke="#D8C68F" stroke-width="1.4">
+    <path d="M10 20 C 60 60, 90 90, 180 170"/>
+    <ellipse cx="60" cy="55" rx="14" ry="9" transform="rotate(40 60 55)"/>
+    <ellipse cx="95" cy="90" rx="14" ry="9" transform="rotate(40 95 90)"/>
+    <ellipse cx="130" cy="125" rx="14" ry="9" transform="rotate(40 130 125)"/>
+  </svg>
+
+  <div class="relative max-w-3xl mx-auto px-6 pt-16 pb-14 text-center">
+    <p class="text-[11px] tracking-[0.45em] mb-4" style="color:#D8C68F;">م ط ب خ &nbsp; ب ي ت ي &nbsp; ف ل س ط ي ن ي</p>
+    <h1 class="font-display text-6xl sm:text-7xl leading-tight" style="color:#F3ECD9;">من إيدين نادية</h1>
+
+    <div class="leaf-divider my-6 max-w-xs mx-auto">
+      <span class="line"></span>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B9A369" stroke-width="1.3"><path d="M12 3c4 2 7 6 7 11a7 7 0 0 1-14 0c0-5 3-9 7-11z"/><path d="M12 6v14"/></svg>
+      <span class="line"></span>
+    </div>
+
+    <p class="text-base sm:text-lg leading-loose max-w-md mx-auto" style="color:#E9E1C9;">وراء كل لقمة حكاية، وطعم ما بيتنسى</p>
+  </div>
+</header>
+
+<!-- ===================== STICKY NAV ===================== -->
+<nav id="catNav" class="sticky top-0 z-30 backdrop-blur bg-[#F3ECD9]/90 border-b" style="border-color:rgba(185,163,105,0.35);">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex gap-2 overflow-x-auto no-scrollbar">
+    <a href="#معجنات" class="nav-pill px-4 py-1.5 rounded-full text-sm border" style="border-color:var(--gold);">المعجنات</a>
+    <a href="#مفرزات" class="nav-pill px-4 py-1.5 rounded-full text-sm border" style="border-color:var(--gold);">المفرزات</a>
+    <a href="#بكجات" class="nav-pill px-4 py-1.5 rounded-full text-sm border" style="border-color:var(--gold);">البكجات ✦</a>
+    <a href="#مقبلات" class="nav-pill px-4 py-1.5 rounded-full text-sm border" style="border-color:var(--gold);">المقبلات</a>
+    <a href="#ورق-عنب" class="nav-pill px-4 py-1.5 rounded-full text-sm border" style="border-color:var(--gold);">ورق عنب ومسخن</a>
+    <a href="#فتات" class="nav-pill px-4 py-1.5 rounded-full text-sm border" style="border-color:var(--gold);">الفتات</a>
+    <a href="#سلطات" class="nav-pill px-4 py-1.5 rounded-full text-sm border" style="border-color:var(--gold);">السلطات</a>
+    <a href="#حلويات" class="nav-pill px-4 py-1.5 rounded-full text-sm border" style="border-color:var(--gold);">الحلويات</a>
+  </div>
+</nav>
+
+<main class="max-w-5xl mx-auto px-4 sm:px-6 pb-24">
+
+  <!-- helper: section title component repeated inline -->
+
+  <!-- ===================== المعجنات ===================== -->
+  <section id="معجنات" class="scroll-mt-20 pt-12">
+    <div class="flex items-center gap-3 mb-6">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" stroke-width="1.4"><path d="M12 3c4 2 7 6 7 11a7 7 0 0 1-14 0c0-5 3-9 7-11z"/><path d="M12 6v14"/></svg>
+      <div>
+        <h2 class="font-display text-3xl" style="color:var(--olive-dk);">المعجنات <span class="text-lg text-[color:var(--gold)]">(بالحبة)</span></h2>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-x-10 gap-y-1 bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-6 relative">
+      <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>صفيحة بعلبكية</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>صفيحة يافاوية</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">1.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>سبانخ</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>جبنة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.35</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>زعتر</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.30</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>بيتزا</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.50</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>هوت دوج</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.30</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>هوت دوج بالجبنة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>سمبوسة باف بالجبنة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>سمبوسة باف باللحم</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>سبرينغ رول</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.50</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>مطبق زعتر فلسطيني</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">2.50</span></div>
+      <div class="flex items-baseline py-2 sm:col-span-1"><span>مطبق جبنة فلسطيني</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">2.00</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== المفرزات ===================== -->
+  <section id="مفرزات" class="scroll-mt-20 pt-16">
+    <div class="flex items-center gap-3 mb-6">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" stroke-width="1.4"><path d="M4 16h16"/><path d="M6 16c0-5 2-9 6-9s6 4 6 9"/><path d="M9 16v2M15 16v2"/></svg>
+      <h2 class="font-display text-3xl" style="color:var(--olive-dk);">المفرزات</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-x-10 gap-y-1 bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-6 relative">
+      <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كبة لحمة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.50</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كبة قرع</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.50</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كبة شمندر</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كبة سبانخ</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>سبرينغ رول</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.50</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>مسخن رول</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.50</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>المنتو</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">1.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>سمبوسة لحمة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>سمبوسة خضار</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.30</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>سمبوسة جبنة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>الكوشية</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.50</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>صفيحة بافاوية</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">1.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>50 حبة شيشبرك</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">5.00</span></div>
+      <div class="flex items-baseline py-2"><span>كرات البطاطا</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.40</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== البكجات ===================== -->
+  <section id="بكجات" class="scroll-mt-20 pt-16">
+    <div class="text-center mb-8">
+      <span class="inline-block text-xs tracking-[0.3em] px-4 py-1 rounded-full mb-3" style="background:var(--gold); color:var(--olive-dk);">عروض مميزة</span>
+      <h2 class="font-display text-4xl" style="color:var(--olive-dk);">بكجات المفرزات</h2>
+      <p class="text-sm mt-2" style="color:#5A6558;">جهّزيها لضيوفك بأسعار جماعية… ووجبة مجانية هدية بكل بكج</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5">
+
+      <!-- Package 1 -->
+      <div class="pkg-card rounded-2xl p-6 relative overflow-hidden shadow-lg">
+        <div class="pkg-badge absolute top-0 left-0 px-4 py-1 rounded-bl-xl text-sm font-bold">20 د.أ</div>
+        <h3 class="font-display text-2xl mt-4" style="color:var(--gold-lt);">بكج توفير</h3>
+        <ul class="mt-4 space-y-1.5 text-sm" style="color:#EDE6D3;">
+          <li>• 15 حبة كبة قرع</li>
+          <li>• 15 حبة كبة لحمة</li>
+          <li>• 50 حبة شيشبرك</li>
+          <li class="pt-1" style="color:var(--gold-lt);">+ 10 سمبوسة خضار مجاناً 🎁</li>
+        </ul>
+      </div>
+
+      <!-- Package 2 -->
+      <div class="pkg-card rounded-2xl p-6 relative overflow-hidden shadow-lg">
+        <div class="pkg-badge absolute top-0 left-0 px-4 py-1 rounded-bl-xl text-sm font-bold">30 د.أ</div>
+        <h3 class="font-display text-2xl mt-4" style="color:var(--gold-lt);">بكج تشكيلة الكبة</h3>
+        <ul class="mt-4 space-y-1.5 text-sm" style="color:#EDE6D3;">
+          <li>• 10 حبة كبة قرع</li>
+          <li>• 15 حبة كبة لحمة</li>
+          <li>• 15 حبة كبة شمندر</li>
+          <li>• 15 حبة كبة سبانخ</li>
+          <li>• 10 سبرنغ رول</li>
+          <li class="pt-1" style="color:var(--gold-lt);">+ 10 سمبوسة خضار مجاناً 🎁</li>
+        </ul>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="pkg-card rounded-2xl p-6 relative overflow-hidden shadow-lg">
+        <div class="pkg-badge absolute top-0 left-0 px-4 py-1 rounded-bl-xl text-sm font-bold">30 د.أ</div>
+        <h3 class="font-display text-2xl mt-4" style="color:var(--gold-lt);">بكج السمبوسة والمسخن</h3>
+        <ul class="mt-4 space-y-1.5 text-sm" style="color:#EDE6D3;">
+          <li>• 25 حبة سمبوسة لحمة</li>
+          <li>• 50 حبة شيشبرك</li>
+          <li>• 25 مسخن رول</li>
+          <li class="pt-1" style="color:var(--gold-lt);">+ 10 سمبوسة جبنة مجاناً 🎁</li>
+        </ul>
+      </div>
+
+      <!-- Package 4 -->
+      <div class="pkg-card rounded-2xl p-6 relative overflow-hidden shadow-lg ring-2" style="--tw-ring-color:var(--gold);">
+        <div class="pkg-badge absolute top-0 left-0 px-4 py-1 rounded-bl-xl text-sm font-bold">50 د.أ</div>
+        <span class="absolute top-3 left-24 text-[10px] tracking-widest" style="color:var(--gold-lt);">✦ الأكبر</span>
+        <h3 class="font-display text-2xl mt-4" style="color:var(--gold-lt);">بكج الضيافة الكبير</h3>
+        <ul class="mt-4 space-y-1.5 text-sm" style="color:#EDE6D3;">
+          <li>• 25 حبة كبة لحمة</li>
+          <li>• 100 حبة شيشبرك</li>
+          <li>• 25 سبرينغ رول</li>
+          <li>• 10 صفيحة يافاوية</li>
+          <li>• 10 كوشية</li>
+          <li>• 10 كبة شمندر</li>
+          <li class="pt-1" style="color:var(--gold-lt);">+ 10 سمبوسة جبنة مجاناً 🎁</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== المقبلات ===================== -->
+  <section id="مقبلات" class="scroll-mt-20 pt-16">
+    <div class="flex items-center gap-3 mb-6">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+      <h2 class="font-display text-3xl" style="color:var(--olive-dk);">المقبلات</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-x-10 gap-y-1 bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-6 relative">
+      <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كبة القرع جاهزة <small class="opacity-60">(الحبة)</small></span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.60</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كبة جاهزة باللحمة البلدية <small class="opacity-60">(الحبة)</small></span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.60</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كبة جاهزة شمندر <small class="opacity-60">(الحبة)</small></span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.50</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كبة جاهزة سبانخ <small class="opacity-60">(الحبة)</small></span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">0.50</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كيلو اليلنجي</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">18.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>شيش برك <small class="opacity-60">(5-6 أشخاص)</small></span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">10.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>حراق أصبعو <small class="opacity-60">(5-6 أشخاص)</small></span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">10.00</span></div>
+      <div class="flex items-baseline py-2"><span>أصابع الدجاج <small class="opacity-60">(10 حبات)</small></span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">5.00</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== ورق عنب ومسخن ===================== -->
+  <section id="ورق-عنب" class="scroll-mt-20 pt-16">
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" stroke-width="1.4"><path d="M12 21c-4-1-7-4-7-9 0-3 2-6 7-9 5 3 7 6 7 9 0 5-3 8-7 9z"/></svg>
+          <h2 class="font-display text-2xl" style="color:var(--olive-dk);">ورق عنب</h2>
+        </div>
+        <div class="bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-5 relative space-y-1">
+          <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+          <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كيلو ورق عنب باللحمة جاهز</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">20.00</span></div>
+          <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>ورق عنب جاهز + 12 كوسا</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">25.00</span></div>
+          <div class="flex items-baseline py-2"><span>ورق عنب جاهز + ريش ولحمة + 12 كوسا</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">35.00</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" stroke-width="1.4"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <h2 class="font-display text-2xl" style="color:var(--olive-dk);">مسخن بزيت الزيتون</h2>
+        </div>
+        <div class="bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-5 relative space-y-1">
+          <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+          <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>4 أرغفة + دجاجة كاملة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">12.00</span></div>
+          <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>6 أرغفة + 2 دجاج</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">20.00</span></div>
+          <div class="flex items-baseline py-2 text-sm opacity-70"><span>زيادة الرغيف الواحد</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">1.00</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== الفتات ===================== -->
+  <section id="فتات" class="scroll-mt-20 pt-16">
+    <div class="flex items-center gap-3 mb-6">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" stroke-width="1.4"><ellipse cx="12" cy="16" rx="8" ry="3"/><path d="M4 16c0-6 3-11 8-11s8 5 8 11"/></svg>
+      <h2 class="font-display text-3xl" style="color:var(--olive-dk);">الفتات</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-5 relative">
+        <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        <h3 class="font-display text-xl mb-3" style="color:var(--olive-dk);">فتة المسخن</h3>
+        <div class="flex justify-between py-1 text-sm"><span>5-6 أشخاص</span><span class="font-bold" style="color:var(--clay);">12.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخصين</span><span class="font-bold" style="color:var(--clay);">5.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخص</span><span class="font-bold" style="color:var(--clay);">3.00</span></div>
+      </div>
+      <div class="bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-5 relative">
+        <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        <h3 class="font-display text-xl mb-3" style="color:var(--olive-dk);">فتة باذنجان</h3>
+        <div class="flex justify-between py-1 text-sm"><span>5-6 أشخاص</span><span class="font-bold" style="color:var(--clay);">10.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخصين</span><span class="font-bold" style="color:var(--clay);">3.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخص</span><span class="font-bold" style="color:var(--clay);">2.00</span></div>
+      </div>
+      <div class="bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-5 relative">
+        <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        <h3 class="font-display text-xl mb-3" style="color:var(--olive-dk);">فتة دجاج <small class="text-xs opacity-60">(مع أرز أو بدون)</small></h3>
+        <div class="flex justify-between py-1 text-sm"><span>5-6 أشخاص</span><span class="font-bold" style="color:var(--clay);">10.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخصين</span><span class="font-bold" style="color:var(--clay);">4.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخص</span><span class="font-bold" style="color:var(--clay);">3.00</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== السلطات ===================== -->
+  <section id="سلطات" class="scroll-mt-20 pt-16">
+    <div class="flex items-center gap-3 mb-6">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" stroke-width="1.4"><path d="M4 12a8 8 0 0 0 16 0z"/><path d="M12 12V4M8 6l4-2 4 2"/></svg>
+      <h2 class="font-display text-3xl" style="color:var(--olive-dk);">السلطات</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-5 relative">
+        <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        <h3 class="font-display text-xl mb-3" style="color:var(--olive-dk);">تبولة</h3>
+        <div class="flex justify-between py-1 text-sm"><span>10 أشخاص</span><span class="font-bold" style="color:var(--clay);">10.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخص</span><span class="font-bold" style="color:var(--clay);">2.00</span></div>
+      </div>
+      <div class="bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-5 relative">
+        <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        <h3 class="font-display text-xl mb-3" style="color:var(--olive-dk);">فتوش</h3>
+        <div class="flex justify-between py-1 text-sm"><span>10 أشخاص</span><span class="font-bold" style="color:var(--clay);">10.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخص</span><span class="font-bold" style="color:var(--clay);">2.00</span></div>
+      </div>
+      <div class="bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-5 relative">
+        <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        <h3 class="font-display text-xl mb-3" style="color:var(--olive-dk);">سلطة حلوم</h3>
+        <div class="flex justify-between py-1 text-sm"><span>10 أشخاص</span><span class="font-bold" style="color:var(--clay);">10.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخص</span><span class="font-bold" style="color:var(--clay);">3.00</span></div>
+      </div>
+      <div class="bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-5 relative">
+        <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        <h3 class="font-display text-xl mb-3" style="color:var(--olive-dk);">سلطة فريكة <small class="text-xs opacity-60">(مع صدر دجاج)</small></h3>
+        <div class="flex justify-between py-1 text-sm"><span>4 أشخاص</span><span class="font-bold" style="color:var(--clay);">6.00</span></div>
+        <div class="flex justify-between py-1 text-sm"><span>شخص</span><span class="font-bold" style="color:var(--clay);">4.00</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== الحلويات ===================== -->
+  <section id="حلويات" class="scroll-mt-20 pt-16">
+    <div class="flex items-center gap-3 mb-6">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><path d="M8 12h8M12 8v8"/></svg>
+      <h2 class="font-display text-3xl" style="color:var(--olive-dk);">الحلويات <span class="text-lg text-[color:var(--gold)]">(بالكيلو)</span></h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-x-10 gap-y-1 bg-[color:var(--cream-lt)] tatreez-border rounded-lg p-6 relative">
+      <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>معمول بالتمر</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">10.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>معمول بالجوز</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">13.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>معمول بالفستق</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">16.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>المقروطة بالتمر</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">12.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كعك صحي بالشعير</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">12.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كعك أساور بالتمر</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">8.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>كعك أساور بطحين القمح</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">9.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>مقروطة القزحة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">15.00</span></div>
+      <div class="flex items-baseline py-2 border-b border-dashed" style="border-color:rgba(63,74,61,0.2);"><span>صينية قزحة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">14.00</span></div>
+      <div class="flex items-baseline py-2"><span>حلا القرفة</span><span class="price-dots"></span><span class="font-bold" style="color:var(--clay);">10.00</span></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="relative overflow-hidden pt-16 pb-10" style="background: radial-gradient(120% 100% at 50% 100%, #4a5748 0%, #384333 55%, #2c352a 100%);">
+  <svg class="absolute top-4 right-6 w-40 h-40 opacity-15" viewBox="0 0 200 200" fill="none" stroke="#D8C68F" stroke-width="1.4">
+    <path d="M180 10 C 130 40, 100 60, 30 150"/>
+    <ellipse cx="130" cy="45" rx="14" ry="9" transform="rotate(35 130 45)"/>
+    <ellipse cx="100" cy="75" rx="14" ry="9" transform="rotate(35 100 75)"/>
+  </svg>
+
+  <div class="relative max-w-2xl mx-auto text-center px-6">
+    <div class="leaf-divider mb-6 max-w-xs mx-auto">
+      <span class="line" style="background:linear-gradient(90deg, transparent, #B9A369, transparent);"></span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D8C68F" stroke-width="1.3"><path d="M12 3c4 2 7 6 7 11a7 7 0 0 1-14 0c0-5 3-9 7-11z"/></svg>
+      <span class="line" style="background:linear-gradient(90deg, transparent, #B9A369, transparent);"></span>
+    </div>
+    <p class="font-display text-2xl sm:text-3xl leading-relaxed" style="color:#F3ECD9;">وراء كل لقمة حكاية، وطعم ما بيتنسى</p>
+    <p class="mt-6 text-xs tracking-[0.3em]" style="color:#B9A369;">من إيدين نادية &nbsp;·&nbsp; للطلب والاستفسار تواصلوا معنا</p>
+  </div>
+</footer>
+
+<script>
+  // highlight active nav pill on scroll
+  const sections = document.querySelectorAll('main section[id]');
+  const pills = document.querySelectorAll('.nav-pill');
+  const setActive = () => {
+    let current = sections[0]?.id;
+    const offset = 90;
+    sections.forEach(sec => {
+      if (window.scrollY + offset >= sec.offsetTop) current = sec.id;
+    });
+    pills.forEach(p => {
+      p.classList.toggle('active', p.getAttribute('href') === '#' + current);
+    });
+  };
+  document.addEventListener('scroll', setActive, {passive:true});
+  setActive();
+</script>
+</body>
+</html>
